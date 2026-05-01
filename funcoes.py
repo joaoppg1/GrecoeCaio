@@ -37,3 +37,22 @@ def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
     novo_rolados = dados_rolados + [valor]
     
     return [novo_rolados, novo_estoque]
+
+#ex 4
+
+def calcula_pontos_regra_simples(faces):
+    dicionario = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+    for numero in faces:
+        if numero == 1:
+            dicionario[1] += 1
+        elif numero == 2:
+            dicionario[2] += 2
+        elif numero == 3:
+            dicionario[3] += 3
+        elif numero == 4:
+            dicionario[4] += 4
+        elif numero == 5:
+            dicionario[5] += 5
+        elif numero == 6:
+            dicionario[6] += 6
+    return dicionario
