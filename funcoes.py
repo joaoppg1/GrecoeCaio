@@ -88,3 +88,20 @@ def calcula_pontos_sequencia_alta(faces):
             return 30
         else:
             return 0
+#ex 8
+
+def calcula_pontos_full_house(faces):
+    contagem = {}
+    for numero in faces:
+        if numero in contagem:
+            contagem[numero] += 1
+        else:
+            contagem[numero] = 1
+    valores = contagem.values()
+    soma = 0
+    for i in faces:
+        soma += i
+    if 3 in valores and 2 in valores:
+        return soma
+    else:
+        return 0
