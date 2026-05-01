@@ -56,3 +56,11 @@ def calcula_pontos_regra_simples(faces):
         elif numero == 6:
             dicionario[6] += 6
     return dicionario
+
+#ex 5
+
+def calcula_pontos_soma(faces):
+    soma = 0
+    for i in faces:
+        soma += i
+    return soma
