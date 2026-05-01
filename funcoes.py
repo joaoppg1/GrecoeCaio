@@ -105,3 +105,22 @@ def calcula_pontos_full_house(faces):
         return soma
     else:
         return 0
+
+#ex 9
+
+def calcula_pontos_quadra(faces):
+    contagem = {}
+    for numero in faces:
+        if numero in contagem:
+            contagem[numero] += 1
+        else:
+            contagem[numero] = 1
+    valores = contagem.values()
+    soma = 0
+    for i in faces:
+        soma += i
+    for quantidade in contagem.values():
+        if quantidade >= 4:
+            return soma
+    
+    return 0
